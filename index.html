@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <title>The Decentralized Post</title>
+    <meta charset="UTF-8" />
+    <meta name="Products" content="Product page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e92e9edbfb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav class="navbar">
+        <h1 id="navbar-logo" class="header_hone">
+          <a href="index.html"><img src="pictures/header/logo.png" alt="" /></a
+          >The Decentralized Post
+        </h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-links">Home</a></li>
+          <li><a href="#" class="nav-links">Blog</a></li>
+          <li><a href="#" class="nav-links">About</a></li>
+          <li><a href="html/contact.html" class="nav-links">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="live-price-container">
+      <div class="live-price"></div>
+    </div>
+    <div id="blog-posts"></div>
+    <footer>
+      <div class="top-footer">
+        <div class="top-footer-center">
+          <h1>THE DECENTRALIZED POST</h1>
+          <form action="success.html" method="get">
+            <label for="email"></label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              required
+              placeholder="Email"
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/frontblog.js"></script>
+    <script src="js/carousel.js"></script>
+  </body>
+</html>

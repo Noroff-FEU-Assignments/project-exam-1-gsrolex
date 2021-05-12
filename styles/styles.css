@@ -1,0 +1,323 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1c2540;
+}
+
+.nav-container {
+  width: 100%;
+  background-color: #1c2540;
+}
+
+.live-price-container {
+  width: 100%;
+  background-color: #273459;
+}
+
+.live-price {
+  display: grid;
+  grid-template-columns: 0.6fr auto 1fr;
+  align-items: center;
+  height: 120px;
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 0.6fr auto 1fr;
+  align-items: center;
+  height: 180px;
+  width: 90%;
+  max-width: 1750px;
+  margin: 0 auto;
+}
+
+#navbar-logo {
+  color: white;
+  justify-self: start;
+  margin-left: 20px;
+}
+
+#navbar-logo {
+  cursor: pointer;
+}
+
+img {
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  list-style: none;
+  text-align: center;
+  width: 65%;
+  justify-self: end;
+  font-size: 20px;
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links:hover {
+  color: red;
+  transition: all 0.2s ease-out;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3 ease-in-out;
+  background: white;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: grid;
+    grid-template-columns: auto;
+    background: red;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  #navbar-logo {
+    margin-left: 20px;
+  }
+
+  .nav-menu.active {
+    background: gray;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links {
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: red;
+    color: rgb(100, 45, 45);
+    transition: all 0.4s ease-out;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+  .menu-toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle:hover {
+    cursor: pointer;
+  }
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* end of mobile header. */
+/* start of footer. */
+
+.header_hone {
+  color: #aeacf2;
+  padding-bottom: 30px;
+  font-size: 23px;
+}
+
+.top-footer {
+  background-color: #0f162a;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-footer-center {
+  text-align: center;
+}
+form {
+  display: flex;
+}
+
+form input {
+  background-color: #9b98f3;
+  border: none;
+  height: 55px;
+  width: 350px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+  border-radius: 5px 0px 0px 5px;
+}
+::placeholder {
+  color: #273459;
+}
+form button {
+  background-color: #7c3bd9;
+  border: none;
+  height: 55px;
+  width: 180px;
+  color: #273459;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0px 5px 5px 0px;
+}
+
+/* start of carousel. */
+/* Parent wrapper to carousel. Width can be changed as needed. */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 90%;
+  margin: 0;
+}
+
+/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+.carousel__photo {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  margin: auto;
+  padding: 1rem 4rem;
+  z-index: 100;
+}
+
+/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+/* Set 'z-index' to sit behind our '.active' item. */
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+/* Translate previous item to the left */
+.carousel__photo.prev {
+  transform: translateX(-100%);
+}
+
+/* Translate next item to the right */
+.carousel__photo.next {
+  transform: translateX(100%);
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(223, 223, 223);
+  opacity: 0.5;
+  z-index: 1001; /* Sit on top of everything */
+}
+
+.carousel__button--prev {
+  left: 5%;
+}
+
+.carousel__button--next {
+  right: 45%;
+}
+
+/* Use pseudo elements to insert arrows inside of navigation buttons */
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  border-right: 5px solid #1c2540;
+  border-bottom: 5px solid #1c2540;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.blogpost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1800px;
+  color: #fff;
+}
+
+.blogcont {
+  color: #fff;
+  max-width: 1800px;
+}
+
+.h_one_blog {
+  color: #fff;
+}
+
+.blogpost p img {
+  display: flex;
+  max-width: 1800px;
+}
