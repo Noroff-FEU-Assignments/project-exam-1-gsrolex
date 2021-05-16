@@ -22,7 +22,7 @@ body {
   display: grid;
   grid-template-columns: 0.6fr auto 1fr;
   align-items: center;
-  height: 120px;
+  height: 90px;
   width: 90%;
   max-width: 1800px;
   margin: 0 auto;
@@ -32,7 +32,7 @@ body {
   display: grid;
   grid-template-columns: 0.6fr auto 1fr;
   align-items: center;
-  height: 180px;
+  height: 115px;
   width: 90%;
   max-width: 1750px;
   margin: 0 auto;
@@ -48,9 +48,11 @@ body {
   cursor: pointer;
 }
 
-img {
+.logopic {
   vertical-align: middle;
   padding-right: 10px;
+  max-width: 90px;
+  max-height: auto;
 }
 
 .nav-menu {
@@ -162,11 +164,25 @@ img {
   padding-bottom: 30px;
   font-size: 23px;
 }
+.navbar h3 {
+  font-size: 1.5em;
+}
 
 .top-footer {
+  margin-top: 200px;
   background-color: #0f162a;
   width: 100%;
-  height: 250px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-fotter {
+  padding-top: 30px;
+  background-color: #aeacf2;
+  width: 100%;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +193,13 @@ img {
 }
 form {
   display: flex;
+}
+
+h2 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 100px;
+  margin-top: -80px;
 }
 
 form input {
@@ -203,97 +226,6 @@ form button {
   border-radius: 0px 5px 5px 0px;
 }
 
-/* start of carousel. */
-/* Parent wrapper to carousel. Width can be changed as needed. */
-.carousel-wrapper {
-  overflow: hidden;
-  width: 90%;
-  margin: 0;
-}
-
-/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
-.carousel-wrapper * {
-  box-sizing: border-box;
-}
-
-/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
-.carousel {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
-.carousel__photo {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 60%;
-  margin: auto;
-  padding: 1rem 4rem;
-  z-index: 100;
-}
-
-/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
-.carousel__photo.initial,
-.carousel__photo.active {
-  opacity: 1;
-  position: relative;
-  z-index: 900;
-}
-
-/* Set 'z-index' to sit behind our '.active' item. */
-.carousel__photo.prev,
-.carousel__photo.next {
-  z-index: 800;
-}
-
-/* Translate previous item to the left */
-.carousel__photo.prev {
-  transform: translateX(-100%);
-}
-
-/* Translate next item to the right */
-.carousel__photo.next {
-  transform: translateX(100%);
-}
-
-/* Style navigation buttons to sit in the middle, either side of the carousel. */
-.carousel__button--prev,
-.carousel__button--next {
-  position: absolute;
-  top: 50%;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: rgb(223, 223, 223);
-  opacity: 0.5;
-  z-index: 1001; /* Sit on top of everything */
-}
-
-.carousel__button--prev {
-  left: 5%;
-}
-
-.carousel__button--next {
-  right: 45%;
-}
-
-/* Use pseudo elements to insert arrows inside of navigation buttons */
-.carousel__button--prev::after,
-.carousel__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 50%;
-  left: 50%;
-  border-right: 5px solid #1c2540;
-  border-bottom: 5px solid #1c2540;
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-
 .carousel__button--next::after {
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
@@ -303,21 +235,276 @@ form button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
   justify-content: center;
-  max-width: 1800px;
-  color: #fff;
+  color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
 }
 
-.blogcont {
-  color: #fff;
-  max-width: 1800px;
+.blogmargin {
+  display: flex;
+  justify-content: center;
 }
-
+h1 {
+  font-size: 60px;
+  padding: 30px 0px 30px 0px;
+}
 .h_one_blog {
-  color: #fff;
+  color: rgb(250, 250, 250);
+  padding: 222px;
 }
 
 .blogpost p img {
   display: flex;
-  max-width: 1800px;
+}
+
+.blogpost p {
+  padding-top: 5px;
+  text-align: left;
+}
+
+figure img {
+  padding: 30px 0px 30px 0px;
+  height: auto;
+  width: auto;
+  max-width: 1000px;
+  max-height: 1000px;
+}
+
+.background_blog {
+  height: 50px;
+  width: 100px;
+  background-color: #555;
+  z-index: 200;
+}
+
+h4 {
+  padding-top: 24px;
+  color: #f1f1f1;
+  font-size: 2em;
+  z-index: 100;
+  display: flex;
+  align-self: center;
+  max-width: 1000px;
+  background-color: rgba(17, 17, 17, 0.8);
+}
+.article_background_shade {
+  display: flex;
+  background-color: #7b85a3;
+  width: 1000px;
+  height: 100px;
+}
+
+#blog-posts-page {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
+/* typography */
+
+h1,
+.carousel-text {
+  padding-top: 30px;
+  text-transform: none;
+  color: #fff;
+}
+
+.carousel-text {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* images and buttons */
+
+img {
+  width: 100%;
+}
+
+.outer-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  grid-column: 1 / 3;
+}
+
+.carousel-container {
+  margin-top: 50px;
+  display: flex;
+  width: 500%;
+  transition: all 0.4s;
+}
+
+.carousel {
+  display: flex;
+  width: 300%;
+}
+
+.carousel section {
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+.box-1,
+.carousel {
+  position: relative;
+}
+
+.margin-h2 {
+  margin: 20px 0px -20px 0px;
+}
+
+.outer-container button {
+  background-color: transparent;
+}
+
+.arrow-left,
+.arrow-right {
+  z-index: 10;
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border: none;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  padding-right: 40px;
+}
+
+.fas {
+  color: #c42b2b;
+}
+
+.fas {
+  text-shadow: 3px 3px 18px #202025;
+}
+
+.overlay,
+.overlay-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+  background-color: rgba(31, 30, 30, 0.5);
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  z-index: 9;
+  width: 100%;
+}
+
+.overlay-2 {
+  height: 55px;
+  bottom: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-box-1 {
+  align-self: center;
+}
+
+.popular-categories {
+  margin-bottom: 20px;
+}
+
+.about-section,
+.box-1,
+.blog-post-box-one,
+.blog-post-box-two,
+.blog-post-box-three {
+  margin: 30px 0px;
+}
+
+/*////////// tablets //////////*/
+@media (min-width: 650px) and (max-width: 900px) {
+  /* typography */
+  h1 {
+    font-size: 50px;
+  }
+
+  .about-section p {
+    line-height: 32px;
+  }
+
+  /* grid layout index */
+
+  .main {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: end;
+  }
+
+  .carousel-container {
+    grid-column: 1 / 3;
+  }
+
+  .carousel-container {
+    margin-top: 0px;
+  }
+}
+
+/*////////// laptops //////////*/
+@media (min-width: 901px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .overlay {
+    height: 160px;
+  }
+
+  .carousel-text {
+    font-size: 30px;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(6, 14.6%);
+    grid-gap: 20px;
+    align-items: start;
+    margin-bottom: 100px;
+  }
+
+  .outer-container {
+    grid-area: 3 / 1 / 5 / 5;
+  }
+
+  .carousel-container {
+    margin: 0px;
+  }
+}
+
+/*////////// desktop //////////*/
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .body {
+    margin: 20px 15%;
+  }
+
+  .main {
+    grid-gap: 30px;
+  }
 }

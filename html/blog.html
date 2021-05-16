@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="Products" content="Product page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="../styles/styles.css" rel="stylesheet" />
+    <link href="../styles/ekstra.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/e92e9edbfb.js"
       crossorigin="anonymous"
@@ -18,8 +19,8 @@
   <body>
     <div class="nav-container">
       <nav class="navbar">
-        <h3 id="navbar-logo" class="header_hone"><a href="index.html">
-          <img class="logopic" src="pictures/header/logo.png" alt="" /></a>The Decentralized Post
+        <h3 id="navbar-logo" class="header_hone"><a href="../index.html">
+          <img class="logopic" src="../pictures/header/logo.png" alt="" /></a>The Decentralized Post
         </h3>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -28,24 +29,16 @@
         </div>
         <ul class="nav-menu">
           <li><a href="#" class="nav-links">Home</a></li>
-          <li><a href="html/blog.html" class="nav-links">Blog</a></li>
+          <li><a href="#" class="nav-links">Blog</a></li>
           <li><a href="#" class="nav-links">About</a></li>
-          <li><a href="html/contact.html" class="nav-links">Contact</a></li>
+          <li><a href="contact.html" class="nav-links">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <div id="live-price-container" class="live-price-container">
-      <div id="live-price" class="live-price"></div>
+    <div class="live-price-container">
+      <div class="live-price"></div>
     </div>
-    <div class="body">
-      <div class="main">
-      <h2 class="margin-h2 full-width latest-posts">Latest Posts</h2>
-      <div class="outer-container">
-          <button class="previous arrow-right"><i class="fas fa-chevron-right fa-4x"></i></button>
-          <button class="next arrow-left"><i class="fas fa-chevron-left fa-4x"></i></button>
-          <div class="carousel-container"></div>
-      </div>
-      </div>
+    <div id="blog-posts-page"></div>
     <footer>
       <div class="top-footer">
         <div class="top-footer-center">
@@ -66,9 +59,8 @@
       <div class="bottom-fotter">
       </div>
     </footer>
-    <script src="js/nav.js"></script>
-    <script src="js/frontblog.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/coingeckoSpesific.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/blogpage.js"></script>
+    <script src="../js/carousel.js"></script>
   </body>
 </html>

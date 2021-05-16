@@ -34,7 +34,7 @@ makeApiCall();
 
 function createHTML(posts) {
     detailContainer.innerHTML = `
-                                 <h1 clss "h_one_blog">${posts.title.rendered}</h1>
+                                 <h1 class"h_one_blog">${posts.title.rendered}</h1>
                                  <p class"blogcont">${posts.content.rendered}</p>
                                  `
 }
