@@ -1,34 +1,36 @@
 const toggleSwitch = document.querySelector('.button_two input[type="checkbox"]');
 
-function switchTheme(e) {
+function changeColor(e) {
     if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('change-mode', 'dark');
     }
     else {
-        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('change-mode', 'light');
     }
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark'); //add this
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light'); //add this
-    }
-}
-
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+const currentTheme = localStorage.getItem('mode') ? localStorage.getItem('mode') : null;
 
 if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    document.documentElement.setAttribute('change-mode', currentTheme);
 
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
     }
 }
+
+
+toggleSwitch.addEventListener('change', changeColor, false);
+
+function changeColor(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('change-mode', 'dark');
+        localStorage.setItem('mode', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('change-mode', 'light');
+        localStorage.setItem('mode', 'light');
+    }
+}
+
+
