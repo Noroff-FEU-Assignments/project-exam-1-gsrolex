@@ -366,11 +366,6 @@ body {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.blogpost img:hover {
-  transition: all ease-in-out 0.3s;
-  transform: scale(1.3);
-}
-
 .blogpost {
   display: flex;
   flex-direction: column;
@@ -642,6 +637,11 @@ img {
  */
   .overlay {
     height: 160px;
+  }
+
+  .blogpost img:hover {
+    transition: all ease-in-out 0.3s;
+    transform: scale(1.3);
   }
 
   .carousel-text {
