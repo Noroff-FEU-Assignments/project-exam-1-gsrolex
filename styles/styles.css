@@ -249,6 +249,45 @@ body {
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  .blogpost {
+    color: var(--font);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+  .blogmargin {
+    display: flex;
+    justify-content: center;
+  }
+  .blogpost h1 {
+    font-size: 25px;
+    padding: 30px 30px 30px 30px;
+  }
+  .h_one_blog {
+    color: var(--font);
+    padding: 222px;
+  }
+
+  .blogpost p {
+    padding: 10px 20px 0px 20px;
+  }
+
+  .blogpost figure img {
+    padding: 30px 0px 30px 0px;
+    height: auto;
+    width: auto;
+    max-width: 420px;
+    max-height: 420px;
+  }
+
+  .background_blog {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+    z-index: 200;
+  }
 }
 
 /* end of mobile header. */
