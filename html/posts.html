@@ -16,32 +16,37 @@
   </head>
   <body>
     <div class="nav-container">
-        <nav class="navbar">
-          <h3 id="navbar-logo">
-            <a href="../index.html"><img class="logopic" src="../pictures/header/logo.png" alt="" /></a
-            >The Decentralized Post
-          </h3>
-          <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul class="nav-menu">
-            <li><a href="#" class="nav-links">Home</a></li>
-            <li><a href="blog.html" class="nav-links">Blog</a></li>
-            <li><a href="#" class="nav-links">About</a></li>
-            <li><a href="contact.html" class="nav-links">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="live-price-container">
-        <div class="live-price"></div>
-      </div>
+      <nav class="navbar">
+        <h3 id="navbar-logo" class="header_hone"><a href="../index.html">
+          <img class="logopic" src="../pictures/header/logo.png" alt="" /></a>The Decentralized Post
+        </h3>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-links">Home</a></li>
+          <li><a href="blog.html" class="nav-links">Blog</a></li>
+          <li><a href="about.html" class="nav-links">About</a></li>
+          <li><a href="contact.html" class="nav-links">Contact</a></li>
+          <li><div class="mode_button">
+            <label class="button_two" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+          </label>
+        </div></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="live-price-container" class="live-price-container">
+      <div id="live-price" class="live-price"></div>
+    </div>
        <div id="blogpost" class="blogpost"></div>
-      <footer>
+       <footer>
         <div class="top-footer">
           <div class="top-footer-center">
-            <h2>THE DECENTRALIZED POST</h2>
+            <h2 class="form-headin">THE DECENTRALIZED POST</h2>
             <form action="success.html" method="get">
               <label for="email"></label>
               <input
@@ -56,8 +61,18 @@
           </div>
         </div>
         <div class="bottom-fotter">
+          <div><p>Follow US</p></div>
+          <div class="bot_i">
+          <i class="fab fa-telegram-plane fa-3x"></i>
+          <i class="fab fa-twitter fa-3x"></i>
+          <i class="fab fa-facebook-f fa-3x"></i>
+          <i class="fab fa-instagram fa-3x"></i>
+          <i class="far fa-envelope fa-3x"></i>
+        </div>
         </div>
       </footer>
       <script src="../js/blog.js"></script>
+      <script src="../js/coingeckoSpesific.js"></script>
+      <script src="../js/switch.js"></script>
   </body>
   

@@ -6,7 +6,7 @@ async function getCoins() {
     const getResults = await response.json();
 
     console.log("response", response);
-    createHTML(getResults);
+    printHTML(getResults);
   }
 
   catch (error) {
@@ -17,7 +17,7 @@ async function getCoins() {
 
 getCoins();
 
-function createHTML(coins) {
+function printHTML(coins) {
   console.log(coins)
   const livedata = document.querySelector("#live-price");
   var coinData = Object.values(coins);
@@ -25,14 +25,21 @@ function createHTML(coins) {
   livedata.innerHTML += `<div class="data">`;
 
   livedata.innerHTML +=
-    `<p>BTC</br> USD: ${coins.get("usd")}</p>`;
-  `<p>Doge USD: ${coinData[1].usd}</p>`;
-  `<p>Polkadot USD: ${coinData[2].usd}</p>`;
-  `<p>Polkadot USD: ${coinData[3].usd}</p>`;
+    `<div>
+    <p>BTC</p> <p class="price_color">USD: ${coins.bitcoin.usd}</p>
+    </div>
+    <div>
+    <p>ETH</p> <p class="price_color">USD: ${coins.ethereum.usd}</p>
+    </div>
+    <div>
+    <p>DOGE</p> <p class="price_color">USD: ${coins.dogecoin.usd}</p>
+    </div>
+    <div>
+    <p>DOT</p> <p class="price_color">USD: ${coins.polkadot.usd}</p>
+    </div>`;
 
 
-
-  livedata.innerHTML += `</div > `;
+  livedata.innerHTML += `</div >`;
 
   start(document);
 }
