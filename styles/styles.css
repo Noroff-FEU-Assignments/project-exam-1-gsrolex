@@ -40,7 +40,6 @@ body {
 
 .live-price {
   display: grid;
-  /* grid-template-columns: 0.6fr auto 1fr; */
   grid-auto-flow: column;
   align-items: center;
   height: 90px;
@@ -128,6 +127,21 @@ body {
     grid-template-columns: 0.8fr auto 0.4fr;
   }
 
+  .live-price p {
+    font-size: 13px;
+  }
+
+  .full-width {
+    padding-left: 50px;
+  }
+
+  .front_intro_box {
+    justify-content: center;
+  }
+  .front_intro_box p {
+    max-width: 200px;
+  }
+
   .nav-menu {
     display: grid;
     grid-template-columns: auto;
@@ -193,6 +207,11 @@ body {
     line-height: 60px;
     width: 100%;
     display: table;
+  }
+
+  .bottom-fotter i {
+    color: var(--font);
+    padding: 0px 1px 0px 1px;
   }
 
   .nav-links:hover {
@@ -485,7 +504,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   height: 100px;
-  background-color: rgba(31, 30, 30, 0.5);
+  background-color: var(--h4_shade);
   position: absolute;
   bottom: 0px;
   text-align: center;
@@ -750,7 +769,7 @@ small,
 
 .bottom-fotter i {
   color: var(--font);
-  padding: 0px 30px 0px 30px;
+  padding: 0px 20px 0px 20px;
 }
 
 .mode_button {
