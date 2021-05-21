@@ -28,16 +28,12 @@ body {
 }
 
 .nav-container {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
   width: 100%;
   background-color: var(--nav-heading);
   z-index: 1000;
 }
 
 .live-price-container {
-  padding-top: 115px;
   width: 100%;
   background-color: var(--nav-price);
 }
@@ -123,6 +119,10 @@ body {
     position: relative;
   }
 
+  .navbar img {
+    display: none;
+  }
+
   .navbar {
     display: grid;
     grid-template-columns: 0.8fr auto 0.4fr;
@@ -142,19 +142,50 @@ body {
     z-index: 300;
   }
 
+  .front_intro_box {
+    margin: 50px;
+    padding-top: 50px;
+    display: flex;
+  }
+
+  .front_intro_box p {
+    font-size: 20px;
+  }
+
+  .front_intro_box img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .top-footer-center form input {
+    height: 55px;
+    width: 130px;
+    font-size: 14px;
+  }
+
+  .top-footer-center form button {
+    height: 55px;
+    width: 70px;
+    color: #273459;
+  }
+
+  .top-footer-center h2 {
+    font-size: 25px;
+  }
+
   #navbar-logo {
     margin-left: 20px;
   }
 
   .nav-menu.active {
     margin-top: 30px;
-    background: #7c3bd9;
+    background: var(--nav-heading);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
   }
   .nav-menu.active:hover {
-    background-color: #7c3bd9;
+    background: var(--nav-heading);
   }
 
   .nav-links {
@@ -370,7 +401,7 @@ h1,
 }
 
 .carousel-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 a {
@@ -441,7 +472,7 @@ img {
 }
 
 .fas {
-  color: #c42b2b;
+  color: #dfdfdf;
 }
 
 .fas {
@@ -547,6 +578,10 @@ img {
     font-size: 60px;
   }
 
+  /*   .navbar img {
+    display: block;
+  }
+ */
   .overlay {
     height: 160px;
   }
@@ -596,6 +631,16 @@ img {
 
   form button {
     width: 180px;
+  }
+
+  .nav-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+  }
+
+  .live-price-container {
+    padding-top: 115px;
   }
 }
 
