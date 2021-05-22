@@ -4,6 +4,9 @@ var maxPosts = 5;
 var morePosts = 3;
 var loadedPosts = 0;
 
+const featuredContent = document.querySelector(".featured-content");
+
+
 
 
 async function getBlogs() {
@@ -16,6 +19,7 @@ async function getBlogs() {
 
         console.log("response", response);
         createHTML(posts);
+        featuredPosts(posts)
     }
 
     catch (error) {
@@ -39,7 +43,25 @@ function createHTML(post) {
     }
 
     blogContainer.innerHTML += `</div>`;
-    start(document);
+}
+
+
+function featuredPosts(post) {
+    let featured = post.filter((post) => post.categories.includes(46));
+    console.log(featured)
+
+    featured.forEach(post => {
+        featuredContent.innerHTML += `<a href="../html/posts.html?id=${post.id}" class="featured-blog">
+                                        <section>
+                                            <img class="featured-image" src="${post._embedded['wp:featuredmedia']['0'].source_url}">
+                                            <div class="featured">
+                                                <h3 class="featured-text">${post.title.rendered}</h3>
+                                            </div>
+                                        </section>
+                                      </a>
+                                      <div class="line-break">.</div>
+                                    </div>`
+    });
 }
 
 

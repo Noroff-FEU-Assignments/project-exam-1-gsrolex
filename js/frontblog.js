@@ -25,7 +25,6 @@ function displayCarousel(post) {
         if (i === 5) {
             break;
         }
-
         carouselContainer.innerHTML += `<a href="../html/posts.html?id=${post[i].id}" class="carousel">
                                             <section>
                                             <img class="carousel-image" src="${post[i]._embedded['wp:featuredmedia']['0'].source_url}">
@@ -38,21 +37,15 @@ function displayCarousel(post) {
     }
 }
 
-const nextBtn = document.querySelector(".arrow-right");
-const previousBtn = document.querySelector(".arrow-left");
-const slides = document.getElementsByClassName("slides");
-
 let sliderIndex = 0;
 
-previousBtn.addEventListener("click", function () {
-
-    sliderIndex = (sliderIndex > 0) ? sliderIndex - 1 : 0;
+function arrowLeft() {
+    sliderIndex = (sliderIndex > 0) ? sliderIndex - 1 : 4;
     carouselContainer.style.transform = "translate(" + (sliderIndex) * -20 + "%)";
-})
+}
 
-nextBtn.addEventListener("click", function () {
-
-    sliderIndex = (sliderIndex < 4) ? sliderIndex + 1 : 4;
+function arrowRight() {
+    sliderIndex = (sliderIndex < 4) ? sliderIndex + 1 : 0;
     carouselContainer.style.transform = "translate(" + (sliderIndex) * -20 + "%)";
-})
+}
 

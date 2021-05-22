@@ -5,7 +5,6 @@ async function getCoins() {
     const response = await fetch(urlCoin);
     const getResults = await response.json();
 
-    console.log("response", response);
     printHTML(getResults);
   }
 
@@ -18,10 +17,8 @@ async function getCoins() {
 getCoins();
 
 function printHTML(coins) {
-  console.log(coins)
   const livedata = document.querySelector("#live-price");
   var coinData = Object.values(coins);
-  console.log(coinData);
   livedata.innerHTML += `<div class="data">`;
 
   livedata.innerHTML +=
@@ -40,6 +37,4 @@ function printHTML(coins) {
 
 
   livedata.innerHTML += `</div >`;
-
-  start(document);
 }
