@@ -1,6 +1,6 @@
 const toggleSwitch = document.querySelector('.button_two input[type="checkbox"]');
 
-function changeColor(e) {
+function changeMode(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('change-mode', 'dark');
     }
@@ -22,7 +22,7 @@ if (currentTheme) {
 
 toggleSwitch.addEventListener('change', changeColor, false);
 
-function changeColor(e) {
+function changeMode(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('change-mode', 'dark');
         localStorage.setItem('mode', 'dark');
