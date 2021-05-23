@@ -1,14 +1,5 @@
 const toggleSwitch = document.querySelector('.button_two input[type="checkbox"]');
 
-function changeColor(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('change-mode', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('change-mode', 'light');
-    }
-}
-
 const currentTheme = localStorage.getItem('mode') ? localStorage.getItem('mode') : null;
 
 if (currentTheme) {
@@ -20,9 +11,9 @@ if (currentTheme) {
 }
 
 
-toggleSwitch.addEventListener('change', changeColor, false);
+toggleSwitch.addEventListener('change', colorModeSwitch, false);
 
-function changeColor(e) {
+function colorModeSwitch(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('change-mode', 'dark');
         localStorage.setItem('mode', 'dark');

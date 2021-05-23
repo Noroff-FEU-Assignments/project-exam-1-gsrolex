@@ -72,6 +72,10 @@ body {
   padding-top: 50px;
   text-align: center;
 }
+.load-more-wrap button:hover {
+  background-color: #8b50df;
+  cursor: pointer;
+}
 
 .load-more-wrap button {
   margin-top: 10px;
@@ -222,9 +226,9 @@ body {
   }
 
   .front_intro_box {
-    margin: 50px;
     padding-top: 50px;
     display: flex;
+    flex-direction: column;
   }
 
   .front_intro_box p {
@@ -234,6 +238,7 @@ body {
   .front_intro_box img {
     max-width: 150px;
     max-height: 150px;
+    align-self: center;
   }
 
   .top-footer-center form input {
@@ -378,6 +383,10 @@ body {
     max-width: 320px;
     max-height: auto;
   }
+
+  footer {
+    margin-top: -120px;
+  }
 }
 
 /* end of mobile header. */
@@ -418,14 +427,14 @@ body {
 
 .top-footer-center form {
   display: flex;
+  padding-top: 50px;
 }
 
 .form-headin,
 .margin-h2 {
   color: var(--font);
   font-size: 2em;
-  margin-bottom: 100px;
-  margin-top: -80px;
+  margin-bottom: 20px;
 }
 
 .top-footer-center form input {
@@ -710,16 +719,17 @@ img {
 }
 
 .front_intro_box {
-  margin: 50px;
-  padding-top: 50px;
+  margin: 20px;
+  padding-top: 20px;
   display: flex;
 }
 
 .front_intro_text {
   align-self: center;
   justify-self: center;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--font);
+  max-width: 250px;
 }
 
 .front_intro {
@@ -808,9 +818,9 @@ img {
   }
 
   .top-footer-center form input {
-    margin-left: 0px;
     width: 250px;
     font-size: 18px;
+    margin-left: 40px;
   }
 
   .top-footer-center form button {
@@ -855,7 +865,7 @@ img {
   }
 
   .front_intro {
-    max-width: 600px;
+    max-width: 200px;
   }
 
   form input {

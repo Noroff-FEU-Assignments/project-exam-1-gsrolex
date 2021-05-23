@@ -2,9 +2,11 @@ const form = document.querySelector("#formContact");
 const formValidated = document.querySelector("#formValidated");
 const myName = document.querySelector("#myName");
 const myNameError = document.querySelector("#myNameError");
-const subject = document.querySelector("#subject");
-const subjectError = document.querySelector("#subjectError");
-const email = document.querySelector("#email");
+const mySubject = document.querySelector("#mySubject");
+const mySubjectError = document.querySelector("#mySubjectError");
+const message = document.querySelector("#message");
+const messageError = document.querySelector("#messageError");
+const myEmail = document.querySelector("#myEmail");
 const emailError = document.querySelector("#emailError");
 
 
@@ -34,30 +36,37 @@ function validateForm(event) {
     event.preventDefault();
 
     var nameValid = false;
-    if (checkLength(myName.value, 0) === true) {
+    if (checkLength(myName.value, 4) === true) {
         nameValid = true;
         myNameError.style.display = "none";
     } else {
         myNameError.style.display = "block";
     }
-
-    var subjectValid = false;
-    if (checkLength(subject.value, 24) === true) {
-        subjectValid = true;
-        subjectError.style.display = "none";
+    var mySubjectValid = false;
+    if (checkLength(mySubject.value, 14) === true) {
+        mySubjectValid = true;
+        mySubjectError.style.display = "none";
     } else {
-        subjectError.style.display = "block";
+        mySubjectError.style.display = "block";
+    }
+
+    var messageValid = false;
+    if (checkLength(message.value, 24) === true) {
+        messageValid = true;
+        messageError.style.display = "none";
+    } else {
+        messageError.style.display = "block";
     }
 
     var emailValid = false;
-    if (validateEmail(email.value) === true) {
+    if (validateEmail(myEmail.value) === true) {
         emailValid = true;
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
     }
 
-    const isFormValid = nameValid === true && subjectValid === true && emailValid === true;
+    const isFormValid = nameValid === true && mySubjectValid === true && messageValid === true && emailValid === true;
 
     if (isFormValid) {
         console.log("it works");
@@ -72,7 +81,8 @@ function submitForm() {
     if (validateForm(event) === true) {
         document.getElementById("formContact").reset();
         myNameError.style.display = "none";
-        subjectError.style.display = "none";
+        mySubjectError.style.display = "none";
+        messageError.style.display = "none";
         emailError.style.display = "none";
     }
 }
@@ -81,7 +91,8 @@ function intializeListeners() {
     form.addEventListener("submit", validateForm);
     formValidated.style.display = "none";
     myName.addEventListener("keyup", keyEvent);
-    subject.addEventListener("keyup", keyEvent);
+    mySubject.addEventListener("keyup", keyEvent);
+    message.addEventListener("keyup", keyEvent);
     email.addEventListener("keyup", keyEvent);
 }
 

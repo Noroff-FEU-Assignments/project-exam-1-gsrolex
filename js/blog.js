@@ -33,6 +33,7 @@ async function makeApiCall() {
 makeApiCall();
 
 function createHTML(posts) {
+    document.title = posts.title.rendered;
     detailContainer.innerHTML = `
                                  <h1 class"h_one_blog">${posts.title.rendered}</h1>
                                  <p class"blogcont">${posts.content.rendered}</p>
