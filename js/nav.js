@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    const nav = document.querySelector('#mobile-menu');
+    const nav = document.querySelector('#phone_hamburger');
     const navlinks = document.querySelector('.nav-menu');
 
     nav.addEventListener('click', function () {

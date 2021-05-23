@@ -1,7 +1,7 @@
 const url = "https://block.wowgold.one/wp-json/wp/v2/posts?per_page=100&_embed";
 
 
-const carouselContainer = document.querySelector(".carousel-container");
+const carouselContainer = document.querySelector(".carousel_box");
 
 async function getLatestPosts() {
 
@@ -28,7 +28,7 @@ function displayCarousel(post) {
         carouselContainer.innerHTML += `<a href="../html/posts.html?id=${post[i].id}" class="carousel">
                                             <section>
                                             <img class="carousel-image" src="${post[i]._embedded['wp:featuredmedia']['0'].source_url}">
-                                                <div class="overlay">
+                                                <div class="farge">
                                                     <h3 class="carousel-text">${post[i].title.rendered}</h3>
                                                 </div>
                                             </section>
